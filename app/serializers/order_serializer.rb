@@ -1,3 +1,3 @@
 class OrderSerializer < ActiveModel::Serializer
-    attributes :id, :order_history, :created_at
+    attributes :id, :items, :created_at
 end

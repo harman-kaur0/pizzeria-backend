@@ -1,7 +1,13 @@
 Rails.application.routes.draw do
-  resources :users
-  resources :items
-  resources :categories
-  resources :orders
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  namespace :api do
+    namespace :v1 do
+      resources :users, only: [:create, :update]
+      resources :items, only: :index
+      resources :categories, only: :index
+      resources :orders, only: [:create, :user_order]
+
+      post "/login", to: "authentication#login"
+      get "/login", to: "authentication#user"
+    end
+  end
 end
