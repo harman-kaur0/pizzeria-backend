@@ -13,7 +13,7 @@ class ApplicationController < ActionController::API
         token = header.split(" ")[1] if header
         begin
             JWT.decode(token, SECRET_KEY)[0]
-        rescue => JWT::DecodeError
+        rescue JWT::DecodeError
             nil
         end
     end

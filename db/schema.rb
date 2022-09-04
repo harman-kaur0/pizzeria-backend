@@ -10,44 +10,46 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_02_043139) do
+ActiveRecord::Schema.define(version: 2022_05_02_041659) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "categories", force: :cascade do |t|
-    t.string "name"
+    t.text "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "items", force: :cascade do |t|
-    t.string "name"
-    t.text "ingredients"
-    t.text "price"
-    t.string "image"
-    t.integer "category_id", null: false
+    t.text "name"
+    t.text "ingredients", default: [], array: true
+    t.json "price"
+    t.text "image"
+    t.bigint "category_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["category_id"], name: "index_items_on_category_id"
   end
 
   create_table "orders", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.text "items"
-    t.text "[]"
+    t.bigint "user_id", null: false
+    t.text "items", default: [], array: true
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
-    t.string "address"
-    t.string "email"
-    t.string "phone_number"
-    t.string "username"
-    t.string "password_digest"
-    t.string "credit_card_number"
-    t.text "cart"
+    t.text "first_name"
+    t.text "last_name"
+    t.text "address"
+    t.text "email"
+    t.text "phone_number"
+    t.text "username"
+    t.text "password_digest"
+    t.text "credit_card_number"
+    t.text "cart", array: true
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
