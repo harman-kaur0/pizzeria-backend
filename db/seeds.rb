@@ -6,8 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 puts "destroying all seeds"
-Category.destroy_all
 Item.destroy_all
+Category.destroy_all
+
 
 puts "creating categories"
 pizza = Category.create(name: "pizza");
@@ -35,18 +36,18 @@ Item.create(category: pasta, name: "Chicken Carbonara", price: {'R': 7.99}, imag
 Item.create(category: pasta, name: "Pasta Primavera", price: {'R': 7.99}, image: "https://cache.dominos.com/olo/6_84_2/assets/build/market/US/_en/images/img/products/larges/S_PRIM.jpg", ingredients: ['Baby spinach', 'Diced tomatoes', 'Mushrooms', 'Onions', 'Penne pasta', 'Alfredo sauce']);
 
 # # DESSERTS
-# Item.create(category: dessert, name: "Cinnamon Sticks", price: {'R': 6.99}, image: "https://cache.dominos.com/olo/6_84_2/assets/build/market/US/_en/images/img/products/larges/F_CINNAT.jpg", ingredients: []);
-# Item.create(category: dessert, name: "Cookie Brownie", price: {'R': 7.99}, image: "https://cache.dominos.com/olo/6_84_2/assets/build/market/US/_en/images/img/products/larges/F_MRBRWNE.jpg", ingredients: []);
-# Item.create(category: dessert, name: "Chocolate Lava Cake", price: {'R': 6.99}, image: "https://cache.dominos.com/olo/6_84_2/assets/build/market/US/_en/images/img/products/larges/F_LAVA.jpg", ingredients: []);
-# Item.create(category: dessert, name: "Apple Pie", price: {'R': 5.99}, image: "https://img.buzzfeed.com/thumbnailer-prod-us-east-1/11e2183efecf4b3b96918c9bf8da3d3d/6Min60Min6hour.jpg", ingredients: []);
+Item.create(category: dessert, name: "Cinnamon Sticks", price: {'R': 6.99}, image: "https://cache.dominos.com/olo/6_84_2/assets/build/market/US/_en/images/img/products/larges/F_CINNAT.jpg", ingredients: []);
+Item.create(category: dessert, name: "Cookie Brownie", price: {'R': 7.99}, image: "https://cache.dominos.com/olo/6_84_2/assets/build/market/US/_en/images/img/products/larges/F_MRBRWNE.jpg", ingredients: []);
+Item.create(category: dessert, name: "Chocolate Lava Cake", price: {'R': 6.99}, image: "https://cache.dominos.com/olo/6_84_2/assets/build/market/US/_en/images/img/products/larges/F_LAVA.jpg", ingredients: []);
+Item.create(category: dessert, name: "Apple Pie", price: {'R': 5.99}, image: "https://img.buzzfeed.com/thumbnailer-prod-us-east-1/11e2183efecf4b3b96918c9bf8da3d3d/6Min60Min6hour.jpg", ingredients: []);
 
 # # DRINKS
-# Item.create(category: drink, name: "Coke", price: {'R': 2.29}, image: "https://cache.dominos.com/olo/6_84_2/assets/build/market/US/_en/images/img/products/larges/F_COKE.jpg", ingredients: []);
-# Item.create(category: drink, name: "Diet Coke", price: {'R': 2.29}, image: "https://cache.dominos.com/olo/6_84_2/assets/build/market/US/_en/images/img/products/larges/F_DIET.jpg", ingredients: []);
-# Item.create(category: drink, name: "Sprite", price: {'R': 2.29}, image: "https://cache.dominos.com/olo/6_84_2/assets/build/market/US/_en/images/img/products/larges/F_SPRITE.jpg", ingredients: []);
-# Item.create(category: drink, name: "Fanta", price: {'R': 2.29}, image: "https://cache.dominos.com/olo/6_84_2/assets/build/market/US/_en/images/img/products/larges/F_ORAN.jpg", ingredients: []);
-# Item.create(category: drink, name: "Lemonade", price: {'R': 2.29}, image: "https://cache.dominos.com/olo/6_84_2/assets/build/market/US/_en/images/img/products/larges/F_LEMND.jpg", ingredients: []);
-# Item.create(category: drink, name: "Bottled Water", price: {'R': 2.29}, image: "https://cache.dominos.com/olo/6_84_2/assets/build/market/US/_en/images/img/products/larges/F_WATER.jpg", ingredients: []);
+Item.create(category: drink, name: "Coke", price: {'R': 2.29}, image: "https://cache.dominos.com/olo/6_84_2/assets/build/market/US/_en/images/img/products/larges/F_COKE.jpg", ingredients: []);
+Item.create(category: drink, name: "Diet Coke", price: {'R': 2.29}, image: "https://cache.dominos.com/olo/6_84_2/assets/build/market/US/_en/images/img/products/larges/F_DIET.jpg", ingredients: []);
+Item.create(category: drink, name: "Sprite", price: {'R': 2.29}, image: "https://cache.dominos.com/olo/6_84_2/assets/build/market/US/_en/images/img/products/larges/F_SPRITE.jpg", ingredients: []);
+Item.create(category: drink, name: "Fanta", price: {'R': 2.29}, image: "https://cache.dominos.com/olo/6_84_2/assets/build/market/US/_en/images/img/products/larges/F_ORAN.jpg", ingredients: []);
+Item.create(category: drink, name: "Lemonade", price: {'R': 2.29}, image: "https://cache.dominos.com/olo/6_84_2/assets/build/market/US/_en/images/img/products/larges/F_LEMND.jpg", ingredients: []);
+Item.create(category: drink, name: "Bottled Water", price: {'R': 2.29}, image: "https://cache.dominos.com/olo/6_84_2/assets/build/market/US/_en/images/img/products/larges/F_WATER.jpg", ingredients: []);
 
 
 puts "seeds created"
